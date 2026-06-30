@@ -140,10 +140,16 @@ Hermes (WSL) -> MCP stdio bridge -> Windows Chrome
 
 使用 `chrome-devtools-mcp`。
 
+先在 Windows 侧安装一个固定版本：
+
+```powershell
+npm install -g chrome-devtools-mcp@1.3.0
+```
+
 如果你的 Windows Chrome 已通过 `chrome://inspect/#remote-debugging` 启用了实时远程调试，在 WSL 中按如下方式添加：
 
 ```bash
-hermes mcp add chrome-devtools-win --command cmd.exe --args /c npx -y chrome-devtools-mcp@latest --autoConnect --no-usage-statistics
+hermes mcp add chrome-devtools-win --command cmd.exe --args /c chrome-devtools-mcp --autoConnect --no-usage-statistics
 ```
 
 保存服务器后：

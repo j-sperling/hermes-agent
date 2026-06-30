@@ -140,10 +140,16 @@ Hermes (WSL) -> MCP stdio bridge -> Windows Chrome
 
 Use `chrome-devtools-mcp`.
 
+Install a pinned copy on the Windows side first:
+
+```powershell
+npm install -g chrome-devtools-mcp@1.3.0
+```
+
 If your Windows Chrome already has live remote debugging enabled from `chrome://inspect/#remote-debugging`, add it like this from WSL:
 
 ```bash
-hermes mcp add chrome-devtools-win --command cmd.exe --args /c npx -y chrome-devtools-mcp@latest --autoConnect --no-usage-statistics
+hermes mcp add chrome-devtools-win --command cmd.exe --args /c chrome-devtools-mcp --autoConnect --no-usage-statistics
 ```
 
 After saving the server:
